@@ -18,6 +18,24 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+@keyframes headerAnimation {
+    0% {
+      transform: translateX(-200%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+}
+
+@keyframes expleAnimation {
+    0% {
+      padding-left: 0vw;
+    }
+    100% {
+      padding-left: 5vw;
+    }
+}
+
 .top-container {
   background-color: #f1f1f1;
   padding: 3vw;
@@ -46,6 +64,7 @@ body {
   border: 3px solid #2956A8;
   border-radius: 1vmax;
   transition: box-shadow 0.5s, -webkit-box-shadow 0.5s, -moz-box-shadow 0.5s, border-radius 0.5s, text-align 0.5s, padding-top 0.5s, padding-bottom 0.5s, padding-left 0.5s, max-width 0.5s, border-radius 0.5s;
+  animation: 1s ease-out 0s 1 headerAnimation;
 
   -webkit-box-shadow: 0px 0px 100px -55px rgba(0,0,0,1);
   -moz-box-shadow: 0px 0px 100px -55px rgba(0,0,0,1);
@@ -80,6 +99,7 @@ body {
   margin: 5px;
   padding-left: 5vw;
   transition: box-shadow 0.5s, -webkit-box-shadow 0.5s, -moz-box-shadow 0.5s, border 0.5s, padding-left 0.5s, border-radius 0.5s, text-align 0.5s;
+  animation: 1s ease-out 0s 1 expleAnimation;
 
   -webkit-box-shadow: 0px 0px 100px -55px rgba(0,0,0,1);
   -moz-box-shadow: 0px 0px 100px -55px rgba(0,0,0,1);
@@ -88,9 +108,6 @@ body {
 
 .exple:hover {
   border: 3px solid #94B0DA;
-  -webkit-box-shadow: 0px 0px 23px -6px rgba(138,138,138,0.86);
-  -moz-box-shadow: 0px 0px 23px -6px rgba(138,138,138,0.86);
-  box-shadow: 0px 0px 23px -6px rgba(138,138,138,0.86);
 }
 
 .dt {
@@ -198,9 +215,6 @@ body {
 
     <!-- |UITLEG| -->
 
-    <div id="hideThisFromNonJs" style="display:none">
-    </div>
-
     <h2>Welkom op mijn website.</h2>
     <h2>Kijk maar even rond.</h2>
   
@@ -234,7 +248,7 @@ body {
 
   //*
 
-document.getElementById('hideThisFromNonJs').style.display='block';
+//document.getElementById('hideThisFromNonJs').style.display='block';
 
 //Scroll stop code
 var header = document.getElementById("myHeader");
