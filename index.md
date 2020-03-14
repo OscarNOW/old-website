@@ -1,0 +1,320 @@
+<!doctype html>
+<html>
+<!-- 
+
+  Zoek met [CTR + F] voor deze woorden:
+  |UITLEG|
+  |HTML PAGE|
+  |JAVASCRIPT
+
+-->
+
+<head>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.top-container {
+  background-color: #f1f1f1;
+  padding: 3vw;
+  text-align: center;
+}
+
+.jswarning{
+
+    height: 100%;
+    width: 100%;
+    background: #ffffff;
+    color: #000000;
+    text-align: center;
+    margin: auto;
+}
+
+.header {
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  padding-left: 2vw;
+  max-width: 90vw;
+  text-align: center;
+  margin: 0 auto;
+  background: rgb(6, 106, 255);
+  color: #f1f1f1;
+  border: 3px solid rgb(0, 102, 255);
+  border-radius: 1vmax;
+
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(138,138,138,0.86);
+  -moz-box-shadow: 0px 0px 20px 0px rgba(138,138,138,0.86);
+  box-shadow: 0px 0px 20px 0px rgba(138,138,138,0.86);
+}
+
+.marge {
+  border-radius: 1vmax;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  padding-left: 2vw;
+  max-width: 90vw;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 1vh;
+  border: 3px solid rgba(24, 207, 0, 0);
+  background: rgba(30, 255, 0, 0);
+  color: #ffffff00;
+}
+
+.exple {
+  background: #ffffff;
+  color: #050505;
+  border: 3px solid #c2c2c2;
+  border-radius: 0.25vmax;
+  margin: 5px;
+  padding-left: 5vw;
+
+  -webkit-box-shadow: 0px 0px 23px -6px rgba(138,138,138,0.86);
+  -moz-box-shadow: 0px 0px 23px -6px rgba(138,138,138,0.86);
+  box-shadow: 0px 0px 23px -6px rgba(138,138,138,0.86);
+}
+
+.dt {
+  background: #ffffff00;
+  color: #ffffff00;
+  cursor: default;
+
+  -webkit-box-shadow: 0px 0px 23px -6px rgba(138,138,138,0.86);
+  -moz-box-shadow: 0px 0px 23px -6px rgba(138,138,138,0.86);
+  box-shadow: 0px 0px 23px -6px rgba(138,138,138,0.86);
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  left: 50%;
+  transform: translateX(-50%);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin-top: 1vh;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+
+.ProgramElement {
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+    width: 0.5vw;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #d6d6d6; 
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+</style>
+
+<!--
+<noscript>
+  <div class="jswarning" id="jswarning">
+    <hr>
+    <b><p>Zorg dat je een browser</p>
+    <p>hebt die '<font color="red">JAVASCRIPT</font>'</p>
+    <p>aan heeft staan.</p></b>
+    <hr>
+  </div>
+</noscript>
+-->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+
+  
+  <div class="marge" id="fcontentdiv" hidden="">
+    <noscript><h2>Zorg dat je 'JAVASCRIPT' aan hebt staan voor deze functie.</h2></noscript>
+    <h2 id="fcontent"></h2>
+    <script>document.getElementById("fcontent").innerHTML = "‌‌&zwnj;";</script>
+  </div>
+
+
+  <noscript>
+  <div class="jswarning">
+    <h2>‌‌&zwnj;</h2>
+    <hr>
+    <b>
+    <p>Sommige delen van deze</p>
+    <p>website werken niet goed</p>
+    <p>als je geen browser</p>
+    <p>gebruikt die '<font color="red">JAVASCRIPT</font>'</p>
+    <p>aan heeft staan.</p></b>
+    <hr>
+    <h2>‌‌&zwnj;</h2>
+  </div>
+  </noscript>
+
+  <h2></h2>
+  <div class="exple">
+
+    <!-- |UITLEG| -->
+
+    <div id="hideThisFromNonJs" style="display:none">
+    </div>
+
+    <h2>Welkom op mijn website.</h2>
+    <h2>Kijk maar even rond.</h2>
+  
+    <!-- |EINDE UITLEG| -->
+
+  </div>
+  <h2></h2>
+
+  
+
+
+  <div class="marge" id="marge">
+    <h2>‌‌&zwnj;</h2>
+  </div>
+  
+
+  <div class="header pointer" id="myHeader" hidden="" onmouseover="calcPointer(this)">
+    <h2>Scroll naar beneden</h2>
+  </div>
+
+
+  <p id="scroll">Gebruik een browser met 'JAVASCRIPT' om deze functie te gebruiken.</p>
+  <!-- Debugging
+  
+  <p id="IsSticky">Gebruik een browser met 'JAVASCRIPT' om deze functie te gebruiken.</p>
+  -->
+
+  
+
+<script>
+  //Javascript Code
+
+  //*
+
+document.getElementById('hideThisFromNonJs').style.display='block';
+
+//Scroll stop code
+var header = document.getElementById("myHeader");
+var ssm = document.getElementById("marge");
+var stopScrollinng;
+header.classList.add("sticky");
+
+if(ssm && header) {
+window.onscroll = function() {OnScroll()};
+
+$("#myHeader").prop('hidden',false);
+$("#fcontentdiv").prop('hidden',false);
+$("#marge").prop('hidden',false);
+
+stopScrollinng = getPositionElements(ssm).y - getPositionElements(header).top
+
+function getPositionElements(element) { 
+  var element = element.getBoundingClientRect(); 
+//  return {x: element.x + window.pageXOffset, y: element.y + window.pageYOffset}
+  return {x: element.x, y: element.y, height: element.height, width: element.width, top: element.top};
+} 
+
+document.getElementById("scroll").innerHTML = "Scroll: " + window.pageYOffset;
+//  document.getElementById("IsSticky").innerHTML = "IsSticky: " + header.classList.contains("sticky");
+  
+function calcPointer(c) {
+  if(Math.floor(window.pageYOffset) == Math.floor(stopScrollinng)) {
+    c.classList.remove("pointer");
+  } else {
+    c.classList.add("pointer");
+  }
+}
+
+function OnScroll() {
+  if (!(document.getElementById("scroll").innerHTML == "Scroll: " + window.pageYOffset)) {document.getElementById("scroll").innerHTML = "Scroll: " + window.pageYOffset;}
+//    if (!(document.getElementById("IsSticky").innerHTML == "IsSticky: " + header.classList.contains("sticky"))) {document.getElementById("IsSticky").innerHTML = "IsSticky: " + header.classList.contains("sticky");}
+  calcPointer(header);
+  //stopScrollinng = getPositionElements(ssm).y - getPositionElements(header).top
+  if (window.pageYOffset > stopScrollinng) {
+    header.classList.remove("sticky");
+    $("#marge").prop('hidden',true);
+  } else {
+    header.classList.add("sticky");
+    $("#marge").prop('hidden',false);
+  }
+}
+
+
+//Scroll down code
+header.addEventListener("click", function(){
+  ScrollDown();
+})
+
+function ScrollDown() {
+  window.scrollTo({
+    top: stopScrollinng,
+    left: 0,
+    behavior: "smooth"
+  });
+}
+}
+  
+  //*/
+  </script>
+
+
+<!-- |HTML PAGE| -->
+<title>Oscar's Javascript</title>
+
+<h2>‌‌&zwnj;</h2>
+<h2>‌‌&zwnj;</h2>
+<hr>
+<h2>‌‌&zwnj;</h2>
+
+<div class="ProgramElement">
+</div>
+
+
+<div class= "dt">
+<h1>
+  
+  _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+
+</h1>
+</div>
+
+<!-- |JAVASCRIPT| -->
+<script>
+  //*
+  // |JAVASCRIPT| \\
+
+
+
+  // |EINDE JAVASCRIPT| \\
+  //*/
+</script>
+<!-- |EINDE HTML PAGE| -->
+
+</body>
