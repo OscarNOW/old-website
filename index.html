@@ -45,7 +45,7 @@ body {
   color: #FFFFFF;
   border: 3px solid #2956A8;
   border-radius: 1vmax;
-  transition: box-shadow 0.5s, -webkit-box-shadow 0.5s, -moz-box-shadow 0.5s, border-radius 0.5s, text-align 0.5s, margin 0.5s, padding-top 0.5s, padding-bottom 0.5s, padding-left 0.5s, max-width 0.5s, border-radius 0.5s;
+  transition: box-shadow 0.5s, -webkit-box-shadow 0.5s, -moz-box-shadow 0.5s, border-radius 0.5s, text-align 0.5s, padding-top 0.5s, padding-bottom 0.5s, padding-left 0.5s, max-width 0.5s, border-radius 0.5s;
 
   -webkit-box-shadow: 0px 0px 100px -55px rgba(0,0,0,1);
   -moz-box-shadow: 0px 0px 100px -55px rgba(0,0,0,1);
@@ -134,6 +134,7 @@ body {
 
 ::-webkit-scrollbar {
     width: 0.5vw;
+    min-width: 10px;
 }
 /* Track */
 ::-webkit-scrollbar-track {
@@ -221,9 +222,8 @@ body {
   </div>
 
 
-  <p id="scroll">Gebruik een browser met 'JAVASCRIPT' om deze functie te gebruiken.</p>
   <!-- Debugging
-  
+  <p id="scroll">Gebruik een browser met 'JAVASCRIPT' om deze functie te gebruiken.</p>
   <p id="IsSticky">Gebruik een browser met 'JAVASCRIPT' om deze functie te gebruiken.</p>
   -->
 
@@ -257,7 +257,7 @@ function getPositionElements(element) {
   return {x: element.x, y: element.y, height: element.height, width: element.width, top: element.top};
 } 
 
-document.getElementById("scroll").innerHTML = "Scroll: " + window.pageYOffset;
+//document.getElementById("scroll").innerHTML = "Scroll: " + window.pageYOffset;
 //  document.getElementById("IsSticky").innerHTML = "IsSticky: " + header.classList.contains("sticky");
   
 function calcPointer(c) {
@@ -269,7 +269,7 @@ function calcPointer(c) {
 }
 
 function OnScroll() {
-  if (!(document.getElementById("scroll").innerHTML == "Scroll: " + window.pageYOffset)) {document.getElementById("scroll").innerHTML = "Scroll: " + window.pageYOffset;}
+//  if (!(document.getElementById("scroll").innerHTML == "Scroll: " + window.pageYOffset)) {document.getElementById("scroll").innerHTML = "Scroll: " + window.pageYOffset;}
 //    if (!(document.getElementById("IsSticky").innerHTML == "IsSticky: " + header.classList.contains("sticky"))) {document.getElementById("IsSticky").innerHTML = "IsSticky: " + header.classList.contains("sticky");}
   calcPointer(header);
   //stopScrollinng = getPositionElements(ssm).y - getPositionElements(header).top
