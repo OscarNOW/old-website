@@ -2,6 +2,8 @@
 <html>
 <!-- 
 
+  Kleurenthema: https://coolors.co/ffffff-b9d6f2-94b0da-3e67b1-030027
+
   Zoek met [CTR + F] voor deze woorden:
   |UITLEG|
   |HTML PAGE|
@@ -39,11 +41,18 @@ body {
   max-width: 90vw;
   text-align: center;
   margin: 0 auto;
-  background: rgb(6, 106, 255);
-  color: #f1f1f1;
-  border: 3px solid rgb(0, 102, 255);
+  background: #1446A0;
+  color: #FFFFFF;
+  border: 3px solid #2956A8;
   border-radius: 1vmax;
+  transition: box-shadow 0.5s, -webkit-box-shadow 0.5s, -moz-box-shadow 0.5s, border-radius 0.5s, text-align 0.5s, margin 0.5s, padding-top 0.5s, padding-bottom 0.5s, padding-left 0.5s, max-width 0.5s, border-radius 0.5s;
 
+  -webkit-box-shadow: 0px 0px 100px -55px rgba(0,0,0,1);
+  -moz-box-shadow: 0px 0px 100px -55px rgba(0,0,0,1);
+  box-shadow: 0px 0px 100px -55px rgba(0,0,0,1);
+}
+
+.header:hover {
   -webkit-box-shadow: 0px 0px 20px 0px rgba(138,138,138,0.86);
   -moz-box-shadow: 0px 0px 20px 0px rgba(138,138,138,0.86);
   box-shadow: 0px 0px 20px 0px rgba(138,138,138,0.86);
@@ -64,13 +73,21 @@ body {
 }
 
 .exple {
-  background: #ffffff;
-  color: #050505;
-  border: 3px solid #c2c2c2;
+  background: #B9D6F2;
+  color: #030027;
+  border: 3px solid #B9D6F2;
   border-radius: 0.25vmax;
   margin: 5px;
   padding-left: 5vw;
+  transition: box-shadow 0.5s, -webkit-box-shadow 0.5s, -moz-box-shadow 0.5s, border 0.5s, padding-left 0.5s, border-radius 0.5s, text-align 0.5s;
 
+  -webkit-box-shadow: 0px 0px 100px -55px rgba(0,0,0,1);
+  -moz-box-shadow: 0px 0px 100px -55px rgba(0,0,0,1);
+  box-shadow: 0px 0px 100px -55px rgba(0,0,0,1);
+}
+
+.exple:hover {
+  border: 3px solid #94B0DA;
   -webkit-box-shadow: 0px 0px 23px -6px rgba(138,138,138,0.86);
   -moz-box-shadow: 0px 0px 23px -6px rgba(138,138,138,0.86);
   box-shadow: 0px 0px 23px -6px rgba(138,138,138,0.86);
