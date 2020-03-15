@@ -20,7 +20,7 @@ body {
 
 @keyframes headerAnimation {
     0% {
-      max-width: 10vw;
+      max-width: 20vw;
     }
     100% {
       max-width: 90vw;
@@ -29,10 +29,23 @@ body {
 
 @keyframes expleAnimation {
     0% {
-      padding-left: 10vw;
+      padding-left: 15vw;
     }
     100% {
       padding-left: 5vw;
+    }
+}
+
+@keyframes dtAnimation {
+    0% {
+      -webkit-box-shadow: 0px 0px 23px -6px rgba(138, 138, 138, 0);
+  -moz-box-shadow: 0px 0px 23px -6px rgba(138, 138, 138, 0);
+  box-shadow: 0px 0px 23px -6px rgba(138, 138, 138, 0);
+    }
+    100% {
+      -webkit-box-shadow: 0px 0px 23px -6px rgba(138,138,138,0.86);
+  -moz-box-shadow: 0px 0px 23px -6px rgba(138,138,138,0.86);
+  box-shadow: 0px 0px 23px -6px rgba(138,138,138,0.86);
     }
 }
 
@@ -64,7 +77,7 @@ body {
   border: 3px solid #2956A8;
   border-radius: 1vmax;
   transition: box-shadow 0.5s, -webkit-box-shadow 0.5s, -moz-box-shadow 0.5s, border-radius 0.5s, text-align 0.5s, padding-top 0.5s, padding-bottom 0.5s, padding-left 0.5s, max-width 0.5s, border-radius 0.5s;
-  animation: 1s ease-out 0s 1 headerAnimation;
+  animation: 1s ease 0s 1 headerAnimation;
 
   -webkit-box-shadow: 0px 0px 100px -55px rgba(0,0,0,1);
   -moz-box-shadow: 0px 0px 100px -55px rgba(0,0,0,1);
@@ -114,6 +127,7 @@ body {
   background: #ffffff00;
   color: #ffffff00;
   cursor: default;
+  animation: 1s ease 0s 1 dtAnimation;
 
   -webkit-box-shadow: 0px 0px 23px -6px rgba(138,138,138,0.86);
   -moz-box-shadow: 0px 0px 23px -6px rgba(138,138,138,0.86);
@@ -317,11 +331,6 @@ function ScrollDown() {
 
 <!-- |HTML PAGE| -->
 <title>Oscar's Javascript</title>
-
-<h2>‌‌&zwnj;</h2>
-<h2>‌‌&zwnj;</h2>
-<hr>
-<h2>‌‌&zwnj;</h2>
 
 <div class="ProgramElement">
 </div>
